@@ -59,9 +59,23 @@ export const App = () => {
     }
   };
 
+  const reset = () => {
+    setNum1("");
+    setNum2("");
+    setSign("");
+    setResult(null);
+  };
+
   return (
     <>
-      <Results num1={num1} num2={num2} sign={sign} result={result} />
+      <Results
+        num1={num1}
+        num2={num2}
+        sign={sign}
+        result={result}
+        onReset={reset}
+      />
+
       <Button onButtonClick={handleButtonClick} />
     </>
   );

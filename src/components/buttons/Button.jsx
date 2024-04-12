@@ -11,7 +11,7 @@ export const Button = ({ onButtonClick }) => {
   const ButtonRow = ({ values }) => (
     <div className="row justify-content-center">
       {values.map((value, index) => (
-        <div key={index} className="col-12 col-md-3">
+        <div key={index} className="col-3">
           <button
             className="btn btn-outline-dark btn-lg"
             onClick={() => onButtonClick(value)}

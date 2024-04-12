@@ -1,16 +1,22 @@
 /* eslint-disable */
 
-export const Results = ({ num1, num2, sign, result }) => {
+export const Results = ({ num1, num2, sign, result, onReset }) => {
   return (
     <>
-      <div
-        className="d-grid justify-content-center align-items-center
-        bg-secondary text-white rounded p-5 mb-4"
-      >
-        <div>
+      <div className="screen">
+        <div className="ac-container">
+          <button className="btn btn-sm btn-secondary" onClick={onReset}>
+            AC
+          </button>
+        </div>
+
+        <div className="operation">
           {num1} {sign} {num2}
         </div>
-        {result !== null && <div>{result}</div>}
+
+        <div>
+          {result !== null ? <div className="result">{result}</div> : null}
+        </div>
       </div>
     </>
   );
