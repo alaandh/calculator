@@ -18,7 +18,7 @@ export const Results = ({ num1, num2, sign, result, onReset }) => {
             value={result !== null ? result : ""}
             readOnly
           />
-          <div className="ac-container">
+          <div className="ac-contain">
             <button className="btn btn-sm btn-dark" onClick={onReset}>
               AC
             </button>

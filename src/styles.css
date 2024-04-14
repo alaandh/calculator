@@ -33,9 +33,10 @@ body {
   border-bottom-right-radius: 1rem;
 }
 
-.ac-container {
+.ac-contain {
   display: grid;
-  bottom: 3.8rem;
+  left: 1.5rem;
+  bottom: 3.6rem;
   position: relative;
   justify-content: end;
 }
@@ -69,10 +70,10 @@ body {
     background-color: rgb(74, 73, 73);
   }
 
-  .ac-container {
+  .ac-contain {
     display: grid;
-    left: 7.48rem;
     bottom: 3.8rem;
+    left: 7.5rem;
     position: relative;
     justify-content: end;
   }
@@ -93,7 +94,7 @@ body {
   }
   .ac-container {
     display: grid;
-    left: 7.5rem !important;
+    left: 4.2rem !important;
     bottom: 3.8rem;
     position: relative;
     justify-content: end;
@@ -116,7 +117,7 @@ body {
 
   .ac-container {
     display: grid;
-    left: 5.8rem;
+    left: 2rem;
     bottom: 3.8rem;
     position: relative;
     justify-content: end;
@@ -126,7 +127,7 @@ body {
 @media (max-width: 575px) {
   .ac-container {
     display: grid;
-    left: 1.5rem;
+    left: 2rem !important;
     bottom: 3.8rem;
     position: relative;
     justify-content: end;
