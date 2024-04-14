@@ -3,20 +3,24 @@
 export const Results = ({ num1, num2, sign, result, onReset }) => {
   return (
     <>
-      <div className="screen">
-        <div className="ac-container">
-          <button className="btn btn-sm btn-secondary" onClick={onReset}>
-            AC
-          </button>
-        </div>
+      <input
+        type="text"
+        className="screen"
+        value={`${num1} ${sign} ${num2}`}
+        readOnly
+      />
 
-        <div className="operation">
-          {num1} {sign} {num2}
-        </div>
+      <input
+        type="text"
+        className="result"
+        value={result !== null ? result : ""}
+        readOnly
+      />
 
-        <div>
-          {result !== null ? <div className="result">{result}</div> : null}
-        </div>
+      <div className="ac-container">
+        <button className="btn btn-sm btn-dark" onClick={onReset}>
+          AC
+        </button>
       </div>
     </>
   );

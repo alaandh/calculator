@@ -5,6 +5,8 @@ export const App = () => {
   const [num1, setNum1] = useState("");
   const [num2, setNum2] = useState("");
   const [sign, setSign] = useState("");
+  // Future feacture
+  // const [extraSign, setExtraSign] = useState("");
   const [result, setResult] = useState(null);
 
   const calculate = (num1, num2, sign) => {
@@ -44,16 +46,23 @@ export const App = () => {
   };
 
   const handleButtonClick = (value) => {
-    if (["+", "-", "×", "÷"].includes(value)) {
-      setSign(value);
-    } else if (value === "=") {
+    // Calculate the result
+    if (value === "=") {
       handleCalculate();
-    } else if (value === "⭠") {
-      setNum1(num1.slice(0, -1));
-    } else {
-      if (!sign) {
+      // Removes a character
+    } else if (value === "⭠" && result === null) {
+      num2
+        ? setNum2(num2.slice(0, -1) || "")
+        : sign
+        ? setSign("")
+        : setNum1(num1.slice(0, -1) || "");
+      // Checks if the value is an operator or a number and assigns it accordingly
+    } else if (result === null) {
+      if (["+", "-", "×", "÷"].includes(value)) {
+        setSign(value);
+      } else if (!sign && num1.length < 18) {
         setNum1(num1 + value);
-      } else {
+      } else if (sign && num2.length < 18) {
         setNum2(num2 + value);
       }
     }
@@ -68,15 +77,17 @@ export const App = () => {
 
   return (
     <>
-      <Results
-        num1={num1}
-        num2={num2}
-        sign={sign}
-        result={result}
-        onReset={reset}
-      />
+      <div className="container">
+        <Results
+          num1={num1}
+          num2={num2}
+          sign={sign}
+          result={result}
+          onReset={reset}
+        />
 
-      <Button onButtonClick={handleButtonClick} />
+        <Button onButtonClick={handleButtonClick} />
+      </div>
     </>
   );
 };
