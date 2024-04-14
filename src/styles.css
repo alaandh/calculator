@@ -16,7 +16,6 @@ body {
 .result {
   font-size: 1.5rem;
   display: flex;
-  padding: 0.2rem;
   border: none;
   outline: none;
   box-shadow: none;
@@ -36,9 +35,9 @@ body {
 
 .ac-container {
   display: grid;
-  justify-content: end;
-  position: relative;
   bottom: 3.8rem;
+  position: relative;
+  justify-content: end;
 }
 
 .btn {
@@ -56,9 +55,80 @@ body {
   color: rgb(74, 73, 73);
 }
 
-@media (max-width: 600px) {
-  body {
-    max-width: 100vh;
-    max-height: 100vh;
+@media (min-width: 1000px) {
+  .screen,
+  .result {
+    display: flex;
+    right: 5.9rem !important;
+    border: none;
+    outline: none;
+    position: relative;
+    box-shadow: none;
+    font-size: 1.5rem;
+    color: #f8f9fa;
+    background-color: rgb(74, 73, 73);
+  }
+
+  .ac-container {
+    display: grid;
+    left: 7.48rem;
+    bottom: 3.8rem;
+    position: relative;
+    justify-content: end;
+  }
+}
+
+@media (min-width: 575px) {
+  .screen,
+  .result {
+    display: flex;
+    right: 2.4rem;
+    border: none;
+    outline: none;
+    position: relative;
+    box-shadow: none;
+    font-size: 1.5rem;
+    color: #f8f9fa;
+    background-color: rgb(74, 73, 73);
+  }
+  .ac-container {
+    display: grid;
+    left: 7.5rem !important;
+    bottom: 3.8rem;
+    position: relative;
+    justify-content: end;
+  }
+}
+
+@media (min-width: 768px) {
+  .screen,
+  .result {
+    display: flex;
+    right: 4.2rem;
+    border: none;
+    outline: none;
+    position: relative;
+    box-shadow: none;
+    font-size: 1.5rem;
+    color: #f8f9fa;
+    background-color: rgb(74, 73, 73);
+  }
+
+  .ac-container {
+    display: grid;
+    left: 5.8rem;
+    bottom: 3.8rem;
+    position: relative;
+    justify-content: end;
+  }
+}
+
+@media (max-width: 575px) {
+  .ac-container {
+    display: grid;
+    left: 1.5rem;
+    bottom: 3.8rem;
+    position: relative;
+    justify-content: end;
   }
 }
