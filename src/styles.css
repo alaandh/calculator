@@ -55,3 +55,10 @@ body {
   border-radius: 0.3rem;
   color: rgb(74, 73, 73);
 }
+
+@media (max-width: 600px) {
+  body {
+    max-width: 100vh;
+    max-height: 100vh;
+  }
+}
