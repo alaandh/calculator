@@ -1,1 +1,1 @@
-Calculadora.
+Calculadora online responsiva.
